@@ -1,4 +1,4 @@
-name: Build Resume PDF
+name: Build & Deploy Resume PDF
 
 on:
   push:
@@ -10,7 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: convert html to pdf
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (if needed for HTML → PDF tool)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: html to pdf
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: index.html
@@ -25,3 +33,16 @@ jobs:
                 "bottom": "10mm"
               }
             }
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: resume.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .
