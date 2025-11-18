@@ -1,9 +1,9 @@
-name: Build & Deploy Resume PDF
+name: Build & Deploy Resume
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:        # allows manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,12 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (if needed for HTML → PDF tool)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: html to pdf
+      - name: Generate PDF from HTML
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: index.html
@@ -34,15 +29,15 @@ jobs:
               }
             }
 
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-pdf
-          path: resume.pdf
+      - name: Prepare export folder
+        run: |
+          mkdir export
+          cp index.html export/
+          mv resume.pdf export/
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: .
+          publish_dir: export
