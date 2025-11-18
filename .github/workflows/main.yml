@@ -20,7 +20,13 @@ jobs:
           outputFile: resume.pdf
           pdfOptions: >
             {
-              "format": "A4"
+              "format": "letter",
+              "margin": {
+                "top": "1mm",
+                "left": "1mm",
+                "right": "1mm",
+                "bottom": "1mm"
+              }
             }
 
       - name: Prepare deploy folder
