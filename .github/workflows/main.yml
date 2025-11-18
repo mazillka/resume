@@ -21,7 +21,12 @@ jobs:
           pdfOptions: >
             {
               "format": "letter",
-              "margin": "10mm"
+              "margin": {
+                "top": "0mm",
+                "left": "0mm",
+                "right": "0mm",
+                "bottom": "0mm"
+              }
             }
 
       - name: Prepare deploy folder
