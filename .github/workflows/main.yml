@@ -29,15 +29,17 @@ jobs:
               }
             }
 
-      - name: Prepare export folder
+      - name: Prepare deploy folder
         run: |
-          mkdir export
-          cp index.html export/
-          mv resume.pdf export/
+          mkdir public
+          cp index.html public/
+          cp -r css public/ || true
+          cp -r assets public/ || true
+          mv resume.pdf public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: export
+          publish_dir: public
