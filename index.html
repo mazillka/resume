@@ -12,7 +12,7 @@
     <style>
         @page {
             size: letter;
-            margin: 10mm;
+            margin: 15mm 10mm;
         }
 
         body {
@@ -28,13 +28,36 @@
             padding: 30px 0;
         }
 
-        .section-title {
+        .section-title, h2 {
             border-left: 4px solid #0d6efd;
             padding-left: 10px;
-            margin-top: 35px;
+            margin-top: 25px;
+            margin-bottom: 15px;
             font-size: 1.4rem;
             font-weight: 600;
+            break-inside: avoid;
             page-break-inside: avoid;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #495057;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .experience-item {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 20px;
         }
 
         .skill-badge {
@@ -56,6 +79,11 @@
                 transition: none !important;
             }
 
+            a {
+                text-decoration: none !important;
+                color: #0d6efd !important;
+            }
+
             .page-break {
                 page-break-before: always;
                 break-before: page;
@@ -69,6 +97,14 @@
             .cv-container {
                 box-shadow: none !important;
                 border: none !important;
+                padding: 0 !important;
+            }
+
+            .skill-badge {
+                border: 1px solid #0d6efd !important;
+                color: #0d6efd !important;
+                background-color: transparent !important;
+                -webkit-print-color-adjust: exact;
             }
         }
     </style>
@@ -86,13 +122,16 @@
                 <div>📍 Greenville, South Carolina, United States</div>
                 <div>📧 <a href="mailto:andrii.shevchuk.yuhanets@gmail.com">andrii.shevchuk.yuhanets@gmail.com</a></div>
                 <div>📱 <a href="tel:+18646213517">+1 (864) 621-3517</a></div>
-                <div>🔗 <a href="https://linkedin.com/in/andrii-shevchuk-yuhanets" target="_blank">
+                <div><img src="./linkedin-icon.png" alt="LinkedIn" width="20" height="20"> <a
+                        href="https://linkedin.com/in/andrii-shevchuk-yuhanets" target="_blank">
                         linkedin.com/in/andrii-shevchuk-yuhanets</a></div>
+                <div><img src="./github-icon.png" alt="GitHub" width="20" height="20"> <a
+                        href="https://github.com/mazillka" target="_blank">github.com/mazillka</a></div>
             </div>
         </div>
 
         <!-- Summary -->
-        <div class="section-title">Summary</div>
+        <h2 class="section-title">Summary</h2>
         <p>
             I’m a Senior Full-Stack Developer with 8+ years of experience building scalable, high-performing web and
             enterprise applications. I work confidently across both backend and frontend technologies, especially C#,
@@ -110,7 +149,7 @@
         </p>
 
         <!-- Skills -->
-        <div class="section-title">Skills</div>
+        <h2 class="section-title">Skills</h2>
         <div>
             <span class="badge bg-primary skill-badge">C#</span>
             <span class="badge bg-primary skill-badge">.NET 5</span>
@@ -124,6 +163,10 @@
             <span class="badge bg-primary skill-badge">Web API</span>
             <span class="badge bg-primary skill-badge">WCF</span>
             <span class="badge bg-primary skill-badge">WPF</span>
+
+            <span class="badge bg-primary skill-badge">Kotlin</span>
+            <span class="badge bg-primary skill-badge">Android SDK</span>
+            <span class="badge bg-primary skill-badge">Jetpack Compose</span>
 
             <span class="badge bg-primary skill-badge">Cloud</span>
             <span class="badge bg-primary skill-badge">Azure</span>
@@ -154,10 +197,13 @@
             <span class="badge bg-primary skill-badge">React</span>
             <span class="badge bg-primary skill-badge">Angular</span>
             <span class="badge bg-primary skill-badge">Vue</span>
+            <span class="badge bg-primary skill-badge">Vuetify</span>
 
             <span class="badge bg-primary skill-badge">Highcharts</span>
             <span class="badge bg-primary skill-badge">Webpack</span>
             <span class="badge bg-primary skill-badge">Node.JS</span>
+            <span class="badge bg-primary skill-badge">Express</span>
+            <span class="badge bg-primary skill-badge">Vite</span>
             <span class="badge bg-primary skill-badge">esbuild</span>
 
             <span class="badge bg-primary skill-badge">JSON</span>
@@ -182,6 +228,8 @@
             <span class="badge bg-primary skill-badge">Chrome API</span>
 
             <span class="badge bg-primary skill-badge">Chrome Extensions</span>
+            <span class="badge bg-primary skill-badge">Edge Extensions</span>
+            <span class="badge bg-primary skill-badge">Opera Extensions</span>
             <span class="badge bg-primary skill-badge">Browser Extensions</span>
 
             <span class="badge bg-primary skill-badge">CQRS</span>
@@ -194,20 +242,71 @@
             <span class="badge bg-primary skill-badge">Redis</span>
 
             <span class="badge bg-primary skill-badge">Docker</span>
+
+            <span class="badge bg-primary skill-badge">Google Gemini</span>
+            <span class="badge bg-primary skill-badge">ChatGPT</span>
+            <span class="badge bg-primary skill-badge">Prompt Engineering</span>
+            <span class="badge bg-primary skill-badge">LLMs</span>
+            <span class="badge bg-primary skill-badge">Generative AI</span>
+
+            <span class="badge bg-primary skill-badge">Home Assistant</span>
+            <span class="badge bg-primary skill-badge">YAML</span>
         </div>
 
         <div class="page-break"></div>
 
         <!-- Experience -->
-        <div class="section-title">Experience</div>
+        <h2 class="section-title">Experience</h2>
 
-        <h5 class="fw-bold">Kopis, LLC (Aug 2024 acquired Orange Bees, LLC)</h5>
-        <div class="text-secondary">11/2023 – 03/2025 • Greenville, United States</div>
+        <div class="experience-item">
+            <h3 class="fw-bold">Software Developer | Independent Creator</h3>
+            <div class="text-secondary">12/2015 – Current • Greenville, United States</div>
 
         <ul>
             <li>
-                <h6><strong>HoneyBrain AI</strong></h6>
-                <strong>Role:</strong> Senior .NET Full-Stack Engineer </br>
+                <strong>Projects:</strong>
+                <ul>
+                    <li>
+                        <strong>Chrome Extensions</strong></br>
+                        Built and published multiple Chrome Extensions, achieving 300,000+ installs.
+                    </li>
+
+                    <li>
+                        <strong>Home Assistant Addon</strong></br>
+                        A powerful, lightweight Download Manager for Home Assistant, built on top of Node.js and
+                        Playwright.
+                        It allows you to search, track, and download media content directly to your Home Assistant
+                        storage.
+                    </li>
+
+                    <li>
+                        <strong>Kids Save Video Player</strong></br>
+                        A lightweight, safe, and easy-to-use Android video player designed specifically for children.
+                    </li>
+                </ul>
+
+                <strong>Skills:</strong>
+                <ul type="none">
+                    <li>
+                        JavaScript, TypeScript, Node.js, Playwright, Chrome API, Chrome Extensions, Edge Extensions,
+                        Opera Extensions,
+                        Browser Extensions, esbuild, Git, Docker, HTML, CSS, Responsive UI, Google API, Webpack, Kotlin,
+                        Android, Home Assistant, Vue, Vuetify, esbuild, express,
+                        Prompt Engineering, AI, Google Gemini, ChatGPT
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3 class="fw-bold">Kopis, LLC (Aug 2024 acquired Orange Bees, LLC)</h3>
+            <div class="text-secondary">11/2023 – 03/2025 • Greenville, United States</div>
+
+        <ul>
+            <li>
+                <h4 class="fw-bold">HoneyBrain AI</h4>
+                <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -246,8 +345,8 @@
             </li>
             <hr>
             <li>
-                <h6><strong>Comporium</strong></h6>
-                <strong>Role:</strong> Senior .NET Full-Stack Engineer </br>
+                <h4 class="fw-bold">Comporium</h4>
+                <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -287,8 +386,8 @@
             <div class="page-break"></div>
             <hr>
             <li>
-                <h6><strong>ElderKey</strong></h6>
-                <strong>Role:</strong> Senior .NET Full-Stack Engineer </br>
+                <h4 class="fw-bold">ElderKey</h4>
+                <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -326,13 +425,16 @@
 
         <div class="page-break"></div>
 
-        <h5 class="fw-bold">SoftServe</h5>
-        <div class="text-secondary">03/2016 – 12/2022 • Rivne, Ukraine / Krakow, Poland</div>
+        </div>
+
+        <div class="experience-item">
+            <h3 class="fw-bold">SoftServe</h3>
+            <div class="text-secondary">03/2016 – 12/2022 • Rivne, Ukraine / Krakow, Poland</div>
 
         <ul>
             <li>
-                <h6><strong>Motorola Solutions</strong></h6>
-                <strong>Role:</strong> Technical Team Lead / Senior .NET Full-Stack Engineer </br>
+                <h4 class="fw-bold">Motorola Solutions</h4>
+                <strong>Role:</strong> Technical Team Lead / Senior .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -395,8 +497,8 @@
 
             <hr>
             <li>
-                <h6><strong>GAF Roofing: North America’s Leading Roofing Manufacturer</strong></h6>
-                <strong>Role:</strong> Technical Team Lead / .NET Full-Stack Engineer </br>
+                <h4 class="fw-bold">GAF Roofing: North America’s Leading Roofing Manufacturer</h4>
+                <strong>Role:</strong> Technical Team Lead / .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -467,8 +569,8 @@
 
             <hr>
             <li>
-                <h6><strong>Comensura</strong></h6>
-                <strong>Role:</strong> .NET Full-Stack Engineer </br>
+                <h4 class="fw-bold">Comensura</h4>
+                <strong>Role:</strong> .NET Full-Stack Engineer <br>
 
                 <strong>Projects:</strong>
                 <ul>
@@ -534,8 +636,10 @@
 
         <div class="page-break"></div>
 
+        </div>
+
         <!-- Education -->
-        <div class="section-title">Education</div>
+        <h2 class="section-title">Education</h2>
         <ul>
             <li>
                 <strong>STEP IT Academy</strong> – Computer Software Engineering (2013–2016)
@@ -546,7 +650,7 @@
         </ul>
 
         <!-- Certifications -->
-        <div class="section-title">Certification</div>
+        <h2 class="section-title">Certification</h2>
         <ul>
             <li>
                 Microsoft Exam 70-483 – Programming in C#
