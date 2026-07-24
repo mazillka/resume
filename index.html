@@ -96,6 +96,13 @@
                 transition: none !important;
             }
 
+            /* Icon-font glyphs pollute the PDF text layer that ATS parsers extract */
+            .fas,
+            .fab,
+            .far {
+                display: none !important;
+            }
+
             a {
                 text-decoration: none !important;
                 color: #0d6efd !important;
@@ -173,14 +180,14 @@
             <h4 class="text-secondary">Senior .NET Full-Stack Engineer</h4>
 
             <div class="mt-2 flex-wrap justify-content-center gap-3">
-                <div><i class="fas fa-map-marker-alt me-1"></i> Greenville, South Carolina, United States</div>
-                <div><i class="fas fa-envelope me-1"></i> <a href="mailto:andrii.shevchuk.yuhanets@gmail.com"
+                <div><i class="fas fa-map-marker-alt me-1" aria-hidden="true"></i> Greenville, South Carolina, United States</div>
+                <div><i class="fas fa-envelope me-1" aria-hidden="true"></i> <a href="mailto:andrii.shevchuk.yuhanets@gmail.com"
                         class="text-decoration-none">andrii.shevchuk.yuhanets@gmail.com</a></div>
-                <div><i class="fas fa-phone me-1"></i> <a href="tel:+18646213517" class="text-decoration-none">+1 (864)
+                <div><i class="fas fa-phone me-1" aria-hidden="true"></i> <a href="tel:+18646213517" class="text-decoration-none">+1 (864)
                         621-3517</a></div>
-                <div><i class="fab fa-linkedin me-1"></i> <a href="https://linkedin.com/in/andrii-shevchuk-yuhanets"
+                <div><i class="fab fa-linkedin me-1" aria-hidden="true"></i> <a href="https://linkedin.com/in/andrii-shevchuk-yuhanets"
                         target="_blank" class="text-decoration-none">linkedin.com/in/andrii-shevchuk-yuhanets</a></div>
-                <div><i class="fab fa-github me-1"></i> <a href="https://github.com/mazillka" target="_blank"
+                <div><i class="fab fa-github me-1" aria-hidden="true"></i> <a href="https://github.com/mazillka" target="_blank"
                         class="text-decoration-none">github.com/mazillka</a></div>
             </div>
         </div>
@@ -252,8 +259,9 @@
             <span class="badge bg-primary skill-badge">Azure</span>
             <span class="badge bg-primary skill-badge">Azure Cosmos DB</span>
             <span class="badge bg-primary skill-badge">Azure DevOps</span>
-            <span class="badge bg-primary skill-badge">Azure Function</span>
+            <span class="badge bg-primary skill-badge">Azure Functions</span>
             <span class="badge bg-primary skill-badge">DevOps</span>
+            <span class="badge bg-primary skill-badge">CI/CD</span>
             <span class="badge bg-primary skill-badge">Microservices</span>
             <span class="badge bg-primary skill-badge">SaaS Development</span>
             <span class="badge bg-primary skill-badge">Docker</span>
@@ -265,14 +273,14 @@
             <span class="badge bg-primary skill-badge">UML</span>
 
             <div class="skill-group-label">Data &amp; APIs</div>
-            <span class="badge bg-primary skill-badge">MsSQL</span>
+            <span class="badge bg-primary skill-badge">Microsoft SQL Server (MsSQL)</span>
             <span class="badge bg-primary skill-badge">PostgreSQL</span>
             <span class="badge bg-primary skill-badge">NoSQL</span>
             <span class="badge bg-primary skill-badge">T-SQL</span>
             <span class="badge bg-primary skill-badge">Entity Framework Core</span>
             <span class="badge bg-primary skill-badge">NHibernate</span>
             <span class="badge bg-primary skill-badge">JSON</span>
-            <span class="badge bg-primary skill-badge">REST</span>
+            <span class="badge bg-primary skill-badge">REST APIs</span>
             <span class="badge bg-primary skill-badge">Swagger</span>
             <span class="badge bg-primary skill-badge">Twilio</span>
             <span class="badge bg-primary skill-badge">Google API</span>
