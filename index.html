@@ -22,12 +22,8 @@
             print-color-adjust: exact !important;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: white !important;
-        }
-
-        body {
             padding: 30px 0;
+            background: white !important;
         }
 
         .section-title,
@@ -58,14 +54,32 @@
         }
 
         .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .job-block {
             break-inside: avoid;
             page-break-inside: avoid;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .skill-badge {
             margin: 3px;
             page-break-inside: avoid;
+        }
+
+        .skill-group-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #6c757d;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        .skill-group-label:first-child {
+            margin-top: 0;
         }
 
         .cv-container {
@@ -97,6 +111,11 @@
                 break-after: page;
             }
 
+            body {
+                padding: 0;
+                font-size: 0.92rem;
+            }
+
             .cv-container {
                 box-shadow: none !important;
                 border: none !important;
@@ -108,6 +127,38 @@
                 color: #0d6efd !important;
                 background-color: transparent !important;
                 -webkit-print-color-adjust: exact;
+            }
+
+            .section-title,
+            h2 {
+                margin-top: 16px;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                margin-top: 12px;
+            }
+
+            h4 {
+                margin-top: 8px;
+            }
+
+            .experience-item {
+                margin-bottom: 10px;
+            }
+
+            .job-block {
+                margin-bottom: 8px;
+            }
+
+            hr {
+                margin: 8px 0;
+            }
+
+            p,
+            li {
+                orphans: 3;
+                widows: 3;
             }
         }
     </style>
@@ -137,24 +188,22 @@
         <!-- Summary -->
         <h2 class="section-title">Summary</h2>
         <p>
-            I’m a Senior Full-Stack Developer with 8+ years of experience building scalable, high-performing web and
-            enterprise applications. I work confidently across both backend and frontend technologies, especially C#,
-            .NET Core, ASP.NET, modern JavaScript frameworks, and a wide range of SQL/NoSQL databases. I enjoy taking
-            complex problems and turning them into simple, effective solutions.
-            <br><br>
-            I’ve led projects that modernized legacy platforms, boosted system speed and stability, and delivered
-            products used by hundreds of thousands of people — including a browser extension with over 300,000 installs.
-            I’m experienced with Azure cloud services, microservices architecture, REST API design, and setting up
-            smooth CI/CD pipelines. I’m also comfortable taking full ownership of a product from the first idea to
-            deployment and long-term support.
-            <br><br>
-            I’m passionate about building software that feels fast, intuitive, and reliable, and I enjoy working with
-            teams that care about quality, clear communication, and creating real value for users.
+            Senior Full-Stack Developer with 8+ years of experience building scalable, high-performing web and
+            enterprise applications across C#, .NET Core, ASP.NET, React, and SQL/NoSQL databases. Contributed to
+            the architecture and development of AI-enabled platforms, including HoneyBrain AI, building APIs,
+            business logic, and dashboards for analyzing AI inspection results. Led projects that modernized legacy
+            platforms and delivered products used by hundreds of thousands of people, including a browser extension
+            with 300,000+ installs. Experienced with Azure cloud services, microservices architecture, REST API
+            design, and CI/CD pipelines, with a track record of taking full ownership of a product from idea to
+            deployment and long-term support. Leverages Claude Code and OpenAI Codex for AI-assisted development, debugging,
+            and refactoring, applying prompt engineering and token-efficient context management to improve the
+            quality of generated output.
         </p>
 
         <!-- Skills -->
         <h2 class="section-title">Skills</h2>
         <div>
+            <div class="skill-group-label">Backend &amp; .NET</div>
             <span class="badge bg-primary skill-badge">C#</span>
             <span class="badge bg-primary skill-badge">.NET 5</span>
             <span class="badge bg-primary skill-badge">.NET 6</span>
@@ -171,37 +220,12 @@
             <span class="badge bg-primary skill-badge">Serilog</span>
             <span class="badge bg-primary skill-badge">WCF</span>
             <span class="badge bg-primary skill-badge">WPF</span>
-
-            <span class="badge bg-primary skill-badge">Kotlin</span>
-            <span class="badge bg-primary skill-badge">Android</span>
-            <span class="badge bg-primary skill-badge">Android SDK</span>
-            <span class="badge bg-primary skill-badge">Jetpack Compose</span>
-
-            <span class="badge bg-primary skill-badge">Cloud</span>
-            <span class="badge bg-primary skill-badge">Azure</span>
-            <span class="badge bg-primary skill-badge">Azure Cosmos DB</span>
-            <span class="badge bg-primary skill-badge">Azure DevOps</span>
-            <span class="badge bg-primary skill-badge">Azure Function</span>
-            <span class="badge bg-primary skill-badge">DevOps</span>
+            <span class="badge bg-primary skill-badge">CQRS</span>
+            <span class="badge bg-primary skill-badge">CRUD</span>
             <span class="badge bg-primary skill-badge">Hangfire</span>
-            <span class="badge bg-primary skill-badge">Microservices</span>
             <span class="badge bg-primary skill-badge">SignalR</span>
-            <span class="badge bg-primary skill-badge">SaaS Development</span>
 
-            <span class="badge bg-primary skill-badge">Checkmarx</span>
-            <span class="badge bg-primary skill-badge">Code Review</span>
-            <span class="badge bg-primary skill-badge">Component Testing</span>
-            <span class="badge bg-primary skill-badge">Integration Testing</span>
-            <span class="badge bg-primary skill-badge">OWASP</span>
-            <span class="badge bg-primary skill-badge">SonarQube</span>
-            <span class="badge bg-primary skill-badge">Unit Testing</span>
-
-            <span class="badge bg-primary skill-badge">Bootstrap</span>
-            <span class="badge bg-primary skill-badge">jQuery</span>
-            <span class="badge bg-primary skill-badge">KnockoutJS</span>
-            <span class="badge bg-primary skill-badge">Responsive UI</span>
-            <span class="badge bg-primary skill-badge">Telerik</span>
-
+            <div class="skill-group-label">Frontend &amp; Web</div>
             <span class="badge bg-primary skill-badge">HTML</span>
             <span class="badge bg-primary skill-badge">CSS</span>
             <span class="badge bg-primary skill-badge">JavaScript</span>
@@ -210,56 +234,78 @@
             <span class="badge bg-primary skill-badge">Angular</span>
             <span class="badge bg-primary skill-badge">Vue</span>
             <span class="badge bg-primary skill-badge">Vuetify</span>
-
+            <span class="badge bg-primary skill-badge">Bootstrap</span>
+            <span class="badge bg-primary skill-badge">jQuery</span>
+            <span class="badge bg-primary skill-badge">KnockoutJS</span>
+            <span class="badge bg-primary skill-badge">Responsive UI</span>
+            <span class="badge bg-primary skill-badge">Telerik</span>
             <span class="badge bg-primary skill-badge">Highcharts</span>
             <span class="badge bg-primary skill-badge">Webpack</span>
-            <span class="badge bg-primary skill-badge">Node.JS</span>
-            <span class="badge bg-primary skill-badge">Express</span>
             <span class="badge bg-primary skill-badge">Vite</span>
             <span class="badge bg-primary skill-badge">esbuild</span>
+            <span class="badge bg-primary skill-badge">Progressive Web Applications (PWAs)</span>
 
+            <div class="skill-group-label">Cloud, DevOps &amp; Architecture</div>
+            <span class="badge bg-primary skill-badge">Cloud</span>
+            <span class="badge bg-primary skill-badge">Azure</span>
+            <span class="badge bg-primary skill-badge">Azure Cosmos DB</span>
+            <span class="badge bg-primary skill-badge">Azure DevOps</span>
+            <span class="badge bg-primary skill-badge">Azure Function</span>
+            <span class="badge bg-primary skill-badge">DevOps</span>
+            <span class="badge bg-primary skill-badge">Microservices</span>
+            <span class="badge bg-primary skill-badge">SaaS Development</span>
+            <span class="badge bg-primary skill-badge">Docker</span>
+            <span class="badge bg-primary skill-badge">Redis</span>
+            <span class="badge bg-primary skill-badge">Git</span>
+            <span class="badge bg-primary skill-badge">Bitbucket</span>
+            <span class="badge bg-primary skill-badge">TFS</span>
+            <span class="badge bg-primary skill-badge">TargetProcess</span>
+            <span class="badge bg-primary skill-badge">UML</span>
+
+            <div class="skill-group-label">Data &amp; APIs</div>
+            <span class="badge bg-primary skill-badge">MsSQL</span>
+            <span class="badge bg-primary skill-badge">PostgreSQL</span>
+            <span class="badge bg-primary skill-badge">NoSQL</span>
+            <span class="badge bg-primary skill-badge">T-SQL</span>
+            <span class="badge bg-primary skill-badge">Entity Framework Core</span>
+            <span class="badge bg-primary skill-badge">NHibernate</span>
             <span class="badge bg-primary skill-badge">JSON</span>
             <span class="badge bg-primary skill-badge">REST</span>
             <span class="badge bg-primary skill-badge">Swagger</span>
             <span class="badge bg-primary skill-badge">Twilio</span>
             <span class="badge bg-primary skill-badge">Google API</span>
 
-            <span class="badge bg-primary skill-badge">MsSQL</span>
-            <span class="badge bg-primary skill-badge">PostgreSQL</span>
-            <span class="badge bg-primary skill-badge">NoSQL</span>
-            <span class="badge bg-primary skill-badge">T-SQL</span>
-
-            <span class="badge bg-primary skill-badge">Entity Framework Core</span>
-            <span class="badge bg-primary skill-badge">NHibernate</span>
-
-            <span class="badge bg-primary skill-badge">Bitbucket</span>
-            <span class="badge bg-primary skill-badge">Git</span>
-            <span class="badge bg-primary skill-badge">TargetProcess</span>
-            <span class="badge bg-primary skill-badge">TFS</span>
-            <span class="badge bg-primary skill-badge">UML</span>
-
-            <span class="badge bg-primary skill-badge">Progressive Web Applications (PWAs)</span>
-            <span class="badge bg-primary skill-badge">Chrome API</span>
-
-            <span class="badge bg-primary skill-badge">Chrome / Edge / Opera Extensions</span>
-
-            <span class="badge bg-primary skill-badge">CQRS</span>
-            <span class="badge bg-primary skill-badge">CRUD</span>
-
+            <div class="skill-group-label">Testing, Security &amp; Quality</div>
+            <span class="badge bg-primary skill-badge">Checkmarx</span>
+            <span class="badge bg-primary skill-badge">Code Review</span>
+            <span class="badge bg-primary skill-badge">Component Testing</span>
+            <span class="badge bg-primary skill-badge">Integration Testing</span>
+            <span class="badge bg-primary skill-badge">Unit Testing</span>
+            <span class="badge bg-primary skill-badge">OWASP</span>
+            <span class="badge bg-primary skill-badge">SonarQube</span>
             <span class="badge bg-primary skill-badge">NUnit</span>
             <span class="badge bg-primary skill-badge">xUnit</span>
             <span class="badge bg-primary skill-badge">Playwright</span>
 
-            <span class="badge bg-primary skill-badge">Redis</span>
+            <div class="skill-group-label">Mobile &amp; Browser Extensions</div>
+            <span class="badge bg-primary skill-badge">Kotlin</span>
+            <span class="badge bg-primary skill-badge">Android</span>
+            <span class="badge bg-primary skill-badge">Android SDK</span>
+            <span class="badge bg-primary skill-badge">Jetpack Compose</span>
+            <span class="badge bg-primary skill-badge">Chrome API</span>
+            <span class="badge bg-primary skill-badge">Chrome / Edge / Opera Extensions</span>
 
-            <span class="badge bg-primary skill-badge">Docker</span>
-
+            <div class="skill-group-label">AI Tools</div>
             <span class="badge bg-primary skill-badge">AI</span>
+            <span class="badge bg-primary skill-badge">Claude Code</span>
             <span class="badge bg-primary skill-badge">Google Gemini</span>
-            <span class="badge bg-primary skill-badge">ChatGPT</span>
-            <span class="badge bg-primary skill-badge">Github Copilot</span>
+            <span class="badge bg-primary skill-badge">OpenAI Codex</span>
+            <span class="badge bg-primary skill-badge">GitHub Copilot</span>
             <span class="badge bg-primary skill-badge">Prompt Engineering</span>
 
+            <div class="skill-group-label">Other</div>
+            <span class="badge bg-primary skill-badge">Node.js</span>
+            <span class="badge bg-primary skill-badge">Express</span>
             <span class="badge bg-primary skill-badge">Home Assistant</span>
             <span class="badge bg-primary skill-badge">YAML</span>
             <span class="badge bg-primary skill-badge">nopCommerce</span>
@@ -270,7 +316,7 @@
         <!-- Experience -->
         <h2 class="section-title">Experience</h2>
 
-        <div class="experience-item">
+        <div class="experience-item job-block">
             <h3 class="fw-bold">Co-Founder & CTO (Pre-seed / MVP Stage)</h3>
             <div class="text-secondary">06/2026 – Current • Greenville, United States</div>
 
@@ -279,11 +325,16 @@
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>SaaS Platform</strong></br>
+                            <strong>SaaS Platform</strong><br>
                             Led end-to-end development of an early-stage SaaS platform from idea to working MVP.
                             Responsible for architecture, full-stack implementation, and cloud deployment using .NET,
                             React, Azure, Docker, and PostgreSQL. Focused on rapid prototyping and product validation in
-                            a pre-launch environment with no customers yet.
+                            a pre-launch environment.
+
+                            Built scalable backend APIs in .NET and responsive, reusable front-end components using React.
+                            Used Claude Code and OpenAI Codex for AI-assisted coding, debugging, refactoring, documentation, and test generation.
+                            Applied prompt engineering techniques to improve the quality, accuracy, and maintainability of AI-generated code.
+                            Optimized token usage by providing focused prompts, relevant context, and clear technical requirements.
                         </li>
                     </ul>
 
@@ -293,14 +344,14 @@
                              C#, .NET 10, ASP.NET Core, Azure DevOps, Microsoft Azure, PostgreSQL,
                              Entity Framework Core, MediatR, CQRS, FluentValidation, Serilog,
                              React, JavaScript, TypeScript, Git, Docker, HTML, CSS, Responsive UI, SaaS Development,
-                             Swagger, Prompt Engineering, AI, Google Gemini, ChatGPT, GitHub Copilot
+                             Swagger, Prompt Engineering, AI, Claude Code, OpenAI Codex, GitHub Copilot
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
 
-        <div class="experience-item">
+        <div class="experience-item job-block">
             <h3 class="fw-bold">Software Developer | Independent Creator</h3>
             <div class="text-secondary">12/2015 – Current • Greenville, United States</div>
 
@@ -309,21 +360,38 @@
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>Chrome Extensions</strong></br>
-                            Built and published multiple Chrome Extensions, achieving 300,000+ installs.
+                            <strong>Chrome Extensions</strong><br>
+                            Built and published multiple Chrome Extensions, achieving 300,000+ installs combined:
+                        </li>
+                        <li>
+                            <a href="https://github.com/mazillka/Menu-For-Google-Services-Ext" target="_blank">Menu For Google Services</a><br>
+                            Browser extension providing quick-access navigation between Google services.
+                        </li>
+                        <li>
+                            <a href="https://github.com/mazillka/Insta-Save-Ext" target="_blank">Insta Save</a><br>
+                            Browser extension for saving photos and videos from Instagram.
+                        </li>
+                        <li>
+                            <a href="https://github.com/mazillka/Threads-Enhancer-Ext" target="_blank">Threads Enhancer</a><br>
+                            Browser extension that adds enhancements and quality-of-life features to Threads.
                         </li>
 
                         <li>
-                            <strong>Home Assistant Addon</strong></br>
-                            A powerful, lightweight Download Manager for Home Assistant, built on top of Node.js and
+                            <a href="https://github.com/mazillka/ha-download-manager-addon" target="_blank">Home Assistant Download Manager Addon</a><br>
+                            Built a powerful, lightweight Download Manager for Home Assistant, built on top of Node.js and
                             Playwright.
                             It allows you to search, track, and download media content directly to your Home Assistant
                             storage.
                         </li>
 
                         <li>
-                            <strong>KidoVid - Offline Video Player</strong></br>
-                            A lightweight, safe, and easy-to-use Android video player designed specifically for
+                            <a href="https://github.com/mazillka/ha-homereader-tts-addon" target="_blank">Home Assistant HomeReader TTS Addon</a><br>
+                            Text-to-speech addon for Home Assistant.
+                        </li>
+
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.kidovid.offlinevideoplayer" target="_blank">KidoVid - Offline Video Player</a><br>
+                            Built and published a lightweight, safe, and easy-to-use Android video player designed specifically for
                             children.
                         </li>
                     </ul>
@@ -335,8 +403,8 @@
                             Opera Extensions,
                             Browser Extensions, esbuild, Git, Docker, HTML, CSS, Responsive UI, Google API, Webpack,
                             Kotlin,
-                            Android, Home Assistant, Vue, Vuetify, esbuild, express,
-                            Prompt Engineering, AI, Google Gemini, ChatGPT
+                            Android, Home Assistant, Vue, Vuetify, express,
+                            Prompt Engineering, AI, Google Gemini, ChatGPT, Claude Code, OpenAI Codex
                         </li>
                     </ul>
                 </li>
@@ -348,14 +416,14 @@
             <div class="text-secondary">11/2023 – 03/2025 • Greenville, United States</div>
 
             <ul>
-                <li>
+                <li class="job-block">
                     <h4 class="fw-bold">HoneyBrain AI</h4>
                     <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>HoneyBrain AI</strong></br>
+                            <a href="https://honeybrain.com/" target="_blank">HoneyBrain AI</a><br>
                             AI-empowered quality control platform for manufacturers that leverages machine learning to
                             enhance production processes.
                         </li>
@@ -364,10 +432,13 @@
                     <strong>Responsibilities:</strong>
                     <ul>
                         <li>
-                            solution design and implementation
+                            Built and enhanced full-stack application features using .NET and Blazor, including APIs, business logic, and user-facing components.
                         </li>
                         <li>
-                            bug fixing
+                            Designed and implemented a responsive dashboard that enabled users to clearly review and analyze AI inspection results.
+                        </li>
+                        <li>
+                            Diagnosed and fixed defects across the application to maintain reliability of inspection workflows.
                         </li>
                     </ul>
 
@@ -375,7 +446,7 @@
                     <ul>
                         <li>
                             Successfully designed and implemented a new responsive dashboard for AI
-                            inspections results
+                            inspection results.
                         </li>
                     </ul>
 
@@ -389,18 +460,18 @@
                     </ul>
                 </li>
                 <hr>
-                <li>
-                    <h4 class="fw-bold">Comporium</h4>
+                <li class="job-block">
+                    <h4 class="fw-bold"><a href="https://www.comporium.com/" target="_blank">Comporium</a></h4>
                     <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>Billing Notification</strong></br>
+                            <strong>Billing Notification</strong><br>
                             Solution that sends billing notifications to customers via email and SMS.
                         </li>
                         <li>
-                            <strong>.NET Applications Upgrade</strong></br>
+                            <strong>.NET Applications Upgrade</strong><br>
                             Upgrading legacy C# applications to the latest .NET versions to enhance performance,
                             security,
                             and maintainability.
@@ -410,11 +481,11 @@
                     <strong>Achievements:</strong>
                     <ul>
                         <li>
-                            Successfully designed and implemented a new billing notification application. The
-                            system ensures timely and reliable billing updates via email, SMS
+                            Successfully designed and implemented a new billing notification application
+                            serving 50,000+ customers with timely and reliable billing updates via email and SMS.
                         </li>
                         <li>
-                            Successfully upgraded multiple C# applications to a more recent version of .NET,
+                            Successfully upgraded 7+ C# applications to a more recent version of .NET,
                             improving performance, security, and maintainability. The migration process involved
                             refactoring legacy code, ensuring compatibility with the latest framework features.
                         </li>
@@ -429,16 +500,15 @@
                     </ul>
                 </li>
 
-                <div class="page-break"></div>
                 <hr>
-                <li>
+                <li class="job-block">
                     <h4 class="fw-bold">ElderKey</h4>
                     <strong>Role:</strong> Senior .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>ElderKey</strong></br>
+                            <a href="https://www.elderkey.com/" target="_blank">ElderKey</a><br>
                             Solution that automates and coordinates text messages between the elder, caregivers, family
                             members, and friends.
                         </li>
@@ -449,7 +519,7 @@
                         <li>
                             Successfully implemented an SMS-based communication mechanism to facilitate
                             seamless interactions between caregivers and the elderly, enhancing real-time
-                            support and coordination
+                            support and coordination.
                         </li>
                         <li>
                             Developed and integrated a scheduled messaging system, enabling automated
@@ -468,9 +538,6 @@
                     </ul>
                 </li>
             </ul>
-
-            <div class="page-break"></div>
-
         </div>
 
         <div class="experience-item">
@@ -478,14 +545,14 @@
             <div class="text-secondary">03/2016 – 12/2022 • Rivne, Ukraine / Krakow, Poland</div>
 
             <ul>
-                <li>
+                <li class="job-block">
                     <h4 class="fw-bold">Motorola Solutions</h4>
                     <strong>Role:</strong> Technical Team Lead / Senior .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>CommandCentral Records</strong></br>
+                            <a href="https://www.youtube.com/watch?v=KPRRMpLqvls" target="_blank">CommandCentral Records</a><br>
                             An advanced, cloud-based RMS that integrates data from computer-aided dispatch (CAD) and
                             digital
                             evidence.
@@ -494,7 +561,7 @@
                             checks before report submission.
                         </li>
                         <li>
-                            <strong>CommandCentral Evidence</strong></br>
+                            <a href="https://www.motorolasolutions.com/en_us/products/command-center-software/public-safety-software/records-and-evidence-management/commandcentral-evidence.html" target="_blank">CommandCentral Evidence</a><br>
                             A digital evidence management system that aggregates and organizes multimedia evidence (like
                             video and audio from body-worn cameras and in-car systems) into secure case files.
                         </li>
@@ -502,31 +569,21 @@
 
                     <strong>Responsibilities:</strong>
                     <ul>
-                        <li>decision-making</li>
-                        <li>solution design and implementation</li>
-                        <li>planning and assignments activity</li>
-                        <li>work on analysis and estimating activities</li>
-                        <li>code review</li>
-                        <li>implementation of unit and integration tests</li>
-                        <li>refactoring</li>
-                        <li>negotiating and mediating</li>
-                        <li>documentation maintenance</li>
+                        <li>Led technical decision-making, solution design, and implementation as team lead.</li>
+                        <li>Planned and assigned work across the team, and drove analysis and estimation for upcoming features.</li>
+                        <li>Reviewed code, wrote unit and integration tests, and refactored existing modules to maintain code quality.</li>
+                        <li>Negotiated and mediated between team members and stakeholders, and maintained technical documentation.</li>
                     </ul>
 
                     <strong>Achievements:</strong>
                     <ul>
                         <li>
-                            As a team lead, I was responsible for overseeing the development of a new feature
-                            for reduction of video and audio records. Our team were able to successfully
-                            implement this feature, which added value to the project and helped achieve its
-                            goals.
+                            Led a team of 6 through the design and delivery of a new feature for reduction of
+                            video and audio records, from planning through successful release.
                         </li>
                         <li>
-                            Configured SonarQube for numbers (20+) of environments. Configuring SonarQube
-                            environments involves setting up the tool to work effectively with a project's
-                            codebase, ensuring that it's able to accurately identify issues and provide useful
-                            feedback. It helps to ensure that the tool works consistently across different stages
-                            of the project.
+                            Configured SonarQube for 20+ environments, ensuring accurate issue detection and
+                            consistent code-quality feedback across all stages of the project.
                         </li>
                     </ul>
 
@@ -542,63 +599,53 @@
                     </ul>
                 </li>
 
-                <div class="page-break"></div>
-
                 <hr>
-                <li>
+                <li class="job-block">
                     <h4 class="fw-bold">GAF Roofing: North America’s Leading Roofing Manufacturer</h4>
                     <strong>Role:</strong> Technical Team Lead / .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>Enterprise Payment Platform</strong></br>
+                            <strong>Enterprise Payment Platform</strong><br>
                             Payment platform for customers with various payment methods including credit cards, ACH,
-                            reward
-                            points and API for subscriber applications.
+                            and reward
+                            points, plus an API for subscriber applications.
                         </li>
                         <li>
-                            <strong>Report Web Platform</strong></br>
+                            <a href="https://www.gaf.com/en-us/resources/business-services/quickmeasure" target="_blank">Report Web Platform</a><br>
                             Web platform for contractors and homeowners to order a roof report and API for vendors to
-                            provide a roof reports with a fully interactive 3D wireframe and model of the home,
+                            provide roof reports with a fully interactive 3D wireframe and model of the home,
                             multifamily
                             building, or commercial building and complete materials list based on measurement for their
                             customers.
                         </li>
                         <li>
-                            <strong>Checkmarx Remediation</strong></br>
+                            <strong>Checkmarx Remediation</strong><br>
                             Improvement of overall security for existing 26 production applications and microservices
                             with
-                            more then 3600 high and medium issues according to Checkmarx security tool
+                            more than 3600 high and medium issues according to Checkmarx security tool
                         </li>
                     </ul>
 
                     <strong>Responsibilities:</strong>
                     <ul>
-                        <li>decision-making</li>
-                        <li>planning and assignments activity</li>
-                        <li>work on analysis and estimating activities</li>
-                        <li>negotiating and mediating</li>
-                        <li>vulnerability fixing</li>
-                        <li>developing and coaching and mentoring others</li>
-                        <li>code review</li>
-                        <li>refactoring</li>
-                        <li>implementation of unit and integration tests</li>
-                        <li>solution design and implementation</li>
+                        <li>Led technical decision-making, solution design, and implementation as team lead, including planning and work assignment across a team of 6.</li>
+                        <li>Drove analysis and estimation for large-scale solutions, and negotiated and mediated between team members and stakeholders.</li>
+                        <li>Remediated vulnerabilities identified by Checkmarx, and reviewed code, refactored, and wrote unit and integration tests to maintain quality.</li>
+                        <li>Coached and mentored other engineers on the team.</li>
                     </ul>
 
                     <strong>Achievements:</strong>
                     <ul>
                         <li>
-                            Estimation of large-scale solutions from the scratch. It was a challenging task that
-                            requires a deep understanding of the project requirements, available resources, and
-                            potential roadblocks. I am using various estimation techniques, such as the use of
-                            historical data, expert judgment, and parametric models, to accurately predict the
-                            resources required for the project.
+                            Estimated large-scale solutions from scratch, combining historical data, expert
+                            judgment, and parametric models to accurately predict the resources required for
+                            each project.
                         </li>
                         <li>
-                            Implement new functionality which helps to reduce costs from 3rd party service:
-                            License fees, maintenance, and customization costs.
+                            Implemented new functionality that reduced third-party service costs by $10,000+
+                            per year, including license fees, maintenance, and customization.
                         </li>
                         <li>
                             Remediated 3,000+ medium and high severity vulnerabilities across 24 projects
@@ -619,34 +666,30 @@
                     </ul>
                 </li>
 
-                <div class="page-break"></div>
-
                 <hr>
-                <li>
-                    <h4 class="fw-bold">Comensura</h4>
+                <li class="job-block">
+                    <h4 class="fw-bold"><a href="https://www.comensura.com/" target="_blank">Comensura</a></h4>
                     <strong>Role:</strong> .NET Full-Stack Engineer <br>
 
                     <strong>Projects:</strong>
                     <ul>
                         <li>
-                            <strong>Supply management platform</strong></br>
-                            A user-friendly and easy to manage hiring management system that will be used as a single
-                            point
-                            of for managers, suppliers, workers and consultants.
-                            We are implementing complex business logic, distribution of permissions and responsibilities
-                            for
-                            different roles, capturing all transactions activity.
+                            <strong>Supply management platform</strong><br>
+                            A user-friendly and easy to manage hiring management system serving as a single
+                            point of contact for managers, suppliers, workers and consultants.
+                            It implements complex business logic, role-based distribution of permissions and
+                            responsibilities, and capture of all transaction activity.
                         </li>
                         <li>
-                            <strong>Adult social care system</strong></br>
+                            <strong>Adult social care system</strong><br>
                             Managed service solution that simplifies many complexities of the adult social care system -
                             creating a better experience for individuals receiving it, greater control for councils
                             delivering it and connecting everyone involved in providing it.
                         </li>
                         <li>
-                            <strong>Progressive web application for Supply management platform</strong></br>
+                            <strong>Progressive web application for Supply management platform</strong><br>
                             Progressive web application in scope of existing web product which
-                            simplifies the process of review and approve of timesheets by managers with responsible UI
+                            simplifies the process of reviewing and approving timesheets by managers with responsive UI
                             and
                             good performance on their mobile devices
                         </li>
@@ -654,28 +697,20 @@
 
                     <strong>Responsibilities:</strong>
                     <ul>
-                        <li>solution design and implementation</li>
-                        <li>code review</li>
-                        <li>work on analysis and estimating activities</li>
-                        <li>planning and assignments activity</li>
-                        <li>requirements refinement</li>
-                        <li>refactoring</li>
-                        <li>bug fixing</li>
+                        <li>Designed and implemented solutions, and refined requirements with stakeholders during planning.</li>
+                        <li>Analyzed and estimated upcoming work, and planned assignments across the team.</li>
+                        <li>Reviewed code, refactored existing modules, and fixed defects to maintain application quality.</li>
                     </ul>
 
                     <strong>Achievements:</strong>
                     <ul>
                         <li>
-                            Integration, configuration and maintenance of SonarQube. SonarQube is a popular
-                            tool used to analyze and measure the quality of code. Configuring SonarQube
-                            environments involves setting up the tool to work effectively with a project's
-                            codebase, ensuring that it's able to accurately identify issues and provide useful
-                            feedback.
+                            Integrated, configured, and maintained SonarQube, ensuring accurate code-quality
+                            analysis and actionable feedback across the project's codebase.
                         </li>
                         <li>
-                            Designed and implemented PWA solution using Webpack, KnockoutJS and
-                            Bootstrap. Implementing a PWA solution was challenging, but we delivered solution
-                            that meets the needs of the business and end users.
+                            Designed and implemented a PWA solution using Webpack, KnockoutJS, and
+                            Bootstrap that met the needs of both the business and end users.
                         </li>
                     </ul>
 
@@ -690,9 +725,6 @@
                     </ul>
                 </li>
             </ul>
-
-            <div class="page-break"></div>
-
         </div>
 
         <!-- Education -->
@@ -707,7 +739,7 @@
         </ul>
 
         <!-- Certifications -->
-        <h2 class="section-title">Certification</h2>
+        <h2 class="section-title">Certifications</h2>
         <ul>
             <li>
                 Microsoft Exam 70-483 – Programming in C#
